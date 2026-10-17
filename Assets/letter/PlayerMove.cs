@@ -42,10 +42,10 @@ public class PlayerMove : MonoBehaviour
 
     private void MovePlayer()
     {
-        Debug.Log("inputVector: " + inputVector.ToString());
+        //Debug.Log("inputVector: " + inputVector.ToString());
         if (inputVector.magnitude == 0f)
         {
-            Debug.Log("movementVector: " + movementVector.ToString());
+            //Debug.Log("movementVector: " + movementVector.ToString());
             movementVector.x = Mathf.MoveTowards(movementVector.x, 0, friction * Time.deltaTime);
             movementVector.z = Mathf.MoveTowards(movementVector.z, 0, friction * Time.deltaTime);
             camAnim.SetBool("deeez nuts me movin", false);
@@ -60,7 +60,7 @@ public class PlayerMove : MonoBehaviour
     private void looksmaxxing()
     {
         look += input_yo_looks_man;
-        Debug.Log("Look: " + look.ToString());
+        //Debug.Log("Look: " + look.ToString());
         transform.localRotation = Quaternion.AngleAxis(look, transform.up);
     }
 
