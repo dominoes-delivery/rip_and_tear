@@ -35,6 +35,7 @@ public class enemyfollowyoubrah : MonoBehaviour
         {
             isAggro = true;
         }
+        if (!enemyNavMeshAgent.enabled) return;
         if (isAggro)
         {
             enemyNavMeshAgent.isStopped = false;
